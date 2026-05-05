@@ -53,12 +53,8 @@ bash cache_emb.sh
 # Run Latte
 
 ```shell
-cd ./src
-CUDA_VISIBLE_DEVICES=0 python main.py \
-  --dataset VLCS \
-  --model 'ViT-B/16' \
-  --use_cache \
-  --algo Latte \
-  --cuda 
+cd ./shell
+bash vlcs.sh
+bash terra_incognita.sh
 ```
 

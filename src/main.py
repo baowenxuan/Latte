@@ -28,10 +28,8 @@ def main(args):
 
     args.num_clients = len(client_datasets)
 
-    print(torch.stack(datasets.text_embeddings, dim=0).shape)
     clip_weights = torch.stack(datasets.text_embeddings, dim=0).to(device=args.device, dtype=args.dtype)
-    clip_weights = F.normalize(clip_weights.mean(dim=1), dim=1)
-    print(clip_weights.norm(dim=1))
+    clip_weights = F.normalize(clip_weights.mean(dim=1), dim=1)  # average across multiple templates
 
     if args.algo == 'no_adapt':
         server = BaseTTAServer(datasets=client_datasets, clip_weights=clip_weights, args=args,
