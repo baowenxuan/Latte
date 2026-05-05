@@ -22,23 +22,43 @@ We use the dataset provided by [DomainBed](https://github.com/facebookresearch/D
 
 Instead of using the given 10,000 samples for each dataset, we run
 the [official code](https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_cifar_c.py) to generate
-corrupted images for the full 50,000 samples for each dataset. 
+corrupted images for the full 50,000 samples for each dataset.
 
 The data should be arranged as: 
 ```
 ${data_root}
-│ 
-├── CIFAR-10-C-Full
-│   ├── brightness.npy
-│   ├── ...
-│   ├── pixelate.npy
-│   └── labels.npy
-│ 
-└── CIFAR-100-C-Full
-│   ├── brightness.npy
-│   ├── ...
-│   ├── pixelate.npy
-    └── labels.npy
+│
+├── domainbed
+│   ├── VLCS
+│   │   ├── Caltech101
+│   │   │   ├── bird
+│   │   │   └── ...
+│   │   ├── ...
+│   │   └── VOC2007
+│   │       ├── bird
+│   │       └── ...
+│   │
+│   └── terra_incognita
+│       ├── location_100
+│       │   ├── bird
+│       │   └── ...
+│       ├── ...
+│       └── location_46
+│           ├── bird
+│           └── ...
+│
+└── corruption
+    ├── CIFAR-10-C-Full
+    │   ├── brightness.npy
+    │   ├── ...
+    │   ├── pixelate.npy
+    │   └── labels.npy
+    │
+    └── CIFAR-100-C-Full
+        ├── brightness.npy
+        ├── ...
+        ├── pixelate.npy
+        └── labels.npy
 ```
 
 ## Cache image embeddings
