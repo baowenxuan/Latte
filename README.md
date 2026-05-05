@@ -8,7 +8,7 @@ Deng, Ruizhong Qiu, Tianxin Wei, Hanghang Tong, Jingrui He
 Code will be available soon! 
 
 - 2025/10/18: Dataset, core code of Latte
-- TODO: Data partition, embedding caching, main function
+- 2026/05/05: Data partition, embedding caching, main function
 
 # Prepare Data
 
@@ -46,11 +46,8 @@ ${data_root}
 For training-free TTA methods (TDA, DMN-ZS, Latte), the pre-trained model is not updated during the training. Therefore 
 we can cache the image and text embeddings for more efficient experiments. To do that, run
 ```shell
-cd ./src
-CUDA_VISIBLE_DEVICES=0 python cache_emb.py \
-  --dataset VLCS \
-  --model 'ViT-B/16' \
-  --cuda 
+cd ./shell
+bash cache_emb.sh
 ```
 
 # Run Latte
