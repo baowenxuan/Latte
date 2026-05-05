@@ -100,13 +100,10 @@ class BaseTTAServer:
 
             client_correct, client_num_samples = 0, 0
 
-            finished = False
-
-            for i in tqdm(range(client.num_samples)):
+            for i in range(client.num_samples):
                 correct, total = client.evaluate_one()
                 client_correct += correct
                 client_num_samples += total
-                finished = (total == 0)
 
             total_correct += client_correct
             total_num_samples += client_num_samples
@@ -137,7 +134,13 @@ class BaseCTTAServer(BaseTTAServer):
 
         total_correct, total_num_samples = 0, 0
 
-        for rnd in tqdm(range(1, self.num_rounds + 1)):  # TODO: partial participant?
+        rnd = 0
+        pbar = tqdm(desc="Rounds")
+
+        while True:
+
+            rnd += 1
+            pbar.update(1)
 
             # select a subset of clients and evaluate
             np.random.shuffle(self.client_ids)
