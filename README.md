@@ -5,24 +5,24 @@ Deng, Ruizhong Qiu, Tianxin Wei, Hanghang Tong, Jingrui He
 
 # Log
 
-Code will be available soon! 
+Complete code is available now! 
 
 - 2025/10/18: Dataset, core code of Latte
 - 2026/05/05: Data partition, embedding caching, main function
 
 # Prepare Data
 
-## Download Datasets
+## Download or generate data
 
-### VLCS and TerraIncognita
+**VLCS and TerraIncognita**
 
 We use the dataset provided by [DomainBed](https://github.com/facebookresearch/DomainBed)
 
-### CIFAR-10-C and CIFAR-100-C
+**CIFAR-10-C and CIFAR-100-C**
 
 Instead of using the given 10,000 samples for each dataset, we run
 the [official code](https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_cifar_c.py) to generate
-corrupted images for the full 50,000 samples for each dataset.
+corrupted images for the full 60,000 samples for each dataset.
 
 The data should be arranged as: 
 ```
