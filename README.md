@@ -9,6 +9,7 @@ Complete code is available now!
 
 - 2025/10/18: Dataset, core code of Latte
 - 2026/05/05: Data partition, embedding caching, main function
+- 2026/05/07: Scripts and dataset links
 
 # Prepare Data
 
@@ -71,6 +72,9 @@ we can cache the image and text embeddings for more efficient experiments. To do
 cd ./shell
 bash cache_emb.sh
 ```
+
+[Here](https://huggingface.co/datasets/baowenxuan/Latte-Cached-Embedding) are the embeddings I cached. 
+You may also download them to `./cache/`. This should match with your results. 
 
 # Run Latte
 
