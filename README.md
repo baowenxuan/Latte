@@ -3,6 +3,10 @@
 [ICCV 2025] Latte: Collaborative Test-Time Adaptation of Vision-Language Models in Federated Learning. Wenxuan Bao, Ruxi
 Deng, Ruizhong Qiu, Tianxin Wei, Hanghang Tong, Jingrui He
 
+[[Arxiv]](https://arxiv.org/abs/2507.21494)
+[[Poster]](https://github.com/baowenxuan/Latte/blob/master/material/Latte_poster.pdf)
+[[Slides]](https://github.com/baowenxuan/Latte/blob/master/material/Latte_slides.pdf)
+
 # Log
 
 Complete code is available now! 
@@ -24,7 +28,7 @@ We use the dataset provided by [DomainBed](https://github.com/facebookresearch/D
 Instead of using the given 10,000 samples for each dataset, we run
 the [official code](https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_cifar_c.py) to generate
 corrupted images for the full 60,000 samples for each dataset. The generated data can be downloaded here: 
-- [CIFAR-10-C-FUll](https://huggingface.co/datasets/baowenxuan/CIFAR-10-C-Full)
+- [CIFAR-10-C-Full](https://huggingface.co/datasets/baowenxuan/CIFAR-10-C-Full)
 - [CIFAR-100-C-Full](https://huggingface.co/datasets/baowenxuan/CIFAR-100-C-Full)
 
 Finally, the data should be arranged as: 
