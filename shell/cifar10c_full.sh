@@ -1,6 +1,6 @@
 cd ../src || exit
 
-dataset='TerraIncognita'
+dataset='CIFAR10CFull'
 model='ViT-B/16'  # ('ViT-B/16' 'RN50')
 
 algorithms=('no_adapt' 'latte')

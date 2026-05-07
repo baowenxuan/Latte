@@ -16,15 +16,17 @@ Complete code is available now!
 
 **VLCS and TerraIncognita**
 
-We use the dataset provided by [DomainBed](https://github.com/facebookresearch/DomainBed)
+We use the dataset provided by [DomainBed](https://github.com/facebookresearch/DomainBed). 
 
 **CIFAR-10-C and CIFAR-100-C**
 
 Instead of using the given 10,000 samples for each dataset, we run
 the [official code](https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_cifar_c.py) to generate
-corrupted images for the full 60,000 samples for each dataset.
+corrupted images for the full 60,000 samples for each dataset. The generated data can be downloaded here: 
+- [CIFAR-10-C-FUll](https://huggingface.co/datasets/baowenxuan/CIFAR-10-C-Full)
+- [CIFAR-100-C-Full](https://huggingface.co/datasets/baowenxuan/CIFAR-100-C-Full)
 
-The data should be arranged as: 
+Finally, the data should be arranged as: 
 ```
 ${data_root}
 │
@@ -76,5 +78,7 @@ bash cache_emb.sh
 cd ./shell
 bash vlcs.sh
 bash terra_incognita.sh
+bash cifar10c_full.sh
+bash cifar100c_full.sh
 ```
 

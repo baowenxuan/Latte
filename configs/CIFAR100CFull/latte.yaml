@@ -1,0 +1,13 @@
+local:
+  enabled: True
+  shot_capacity: 8
+  alpha: 0.7  # weight to combine clip classifier and memory classifier
+  beta: 60.0  # sample similarity multiplier, larger -> 1-NN
+  gamma: 1.5  # entropy weighting for making prediction
+
+## --- Global Cache Configuration ---
+global:
+  enabled: True
+  shot_capacity: 5
+  prototype: exp_weighted  # how to construct class prototype: mean, exp_weighted, min_ent
+  gamma: 1.5  # entropy weighting for constructing prototypes
